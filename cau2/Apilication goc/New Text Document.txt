@@ -1,0 +1,8 @@
+	@Bean
+	public RestTemplate restTemplate() {
+		RestTemplate restTemplate = new RestTemplate();
+		DefaultUriBuilderFactory defaultUriBuilderFactory = new DefaultUriBuilderFactory(
+				httplocalhost8080);
+		restTemplate.setUriTemplateHandler(defaultUriBuilderFactory);
+		return restTemplate;
+	}
